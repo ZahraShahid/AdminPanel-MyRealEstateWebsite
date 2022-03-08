@@ -31,7 +31,7 @@ return (
     <td>{linkedin}</td>
 	<td>
 		<Link className="edit-link"
-		to={"/edit-teamMember/" + _id}>
+		to={"edit-teamMember/" + _id}>
 		Edit
 		</Link>
 		<Button onClick={deleteTeamMember}

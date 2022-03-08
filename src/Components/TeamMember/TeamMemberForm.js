@@ -6,23 +6,25 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormGroup, FormLabel, Button } from "react-bootstrap";
 
 const TeamMemberForm = (props) => {
-const validationSchema = Yup.object().shape({
-    image: Yup.string().required("Image is required"),
-	name: Yup.string().required("Rquired"),
-    role: Yup.string().required("Required"),
-    facebook: Yup.string().required("Required"),
-    twitter: Yup.string().required("Required"),
-    instagram: Yup.string().required("Required"),
-    linkedin: Yup.string().required("Required"),
-});
+// const validationSchema = Yup.object().shape({
+//     image: Yup.string().required("Image is required"),
+// 	name: Yup.string().required("Rquired"),
+//     role: Yup.string().required("Required"),
+//     facebook: Yup.string().required("Required"),
+//     twitter: Yup.string().required("Required"),
+//     instagram: Yup.string().required("Required"),
+//     linkedin: Yup.string().required("Required"),
+// });
 // console.log(props);
 return (
 	<div className="form-wrapper">
-	<Formik {...props} validationSchema={validationSchema}>
+	<Formik {...props} 
+	// validationSchema={validationSchema}
+	>
 		<Form>
 		<FormLabel>Profile Image Link</FormLabel>
         <FormGroup>
-			<Field name="Image Link" type="text"
+			<Field name="image" type="text"
 				className="form-control" />
 			<ErrorMessage
 			name="image"
@@ -32,7 +34,7 @@ return (
 		</FormGroup>
 		<FormLabel>Name</FormLabel>
 		<FormGroup>
-			<Field name="Name" type="text"
+			<Field name="name" type="text"
 				className="form-control" />
 			<ErrorMessage
 			name="name"
@@ -42,7 +44,7 @@ return (
 		</FormGroup>
 		<FormLabel>Role</FormLabel>
 		<FormGroup>
-			<Field name="Role" type="text"
+			<Field name="role" type="text"
 				className="form-control" />
 			<ErrorMessage
 			name="role"
@@ -52,7 +54,7 @@ return (
 		</FormGroup>
 		<FormLabel>Facebook Link</FormLabel>
         <FormGroup>
-			<Field name="Facebook Link" type="text"
+			<Field name="facebook" type="text"
 				className="form-control" />
 			<ErrorMessage
 			name="facebook"
@@ -62,7 +64,7 @@ return (
 		</FormGroup>
 		<FormLabel>Twitter Link</FormLabel>
         <FormGroup>
-			<Field name="Twitter Link" type="text"
+			<Field name="twitter" type="text"
 				className="form-control" />
 			<ErrorMessage
 			name="twitter"
@@ -72,7 +74,7 @@ return (
 		</FormGroup>
 		<FormLabel>Instagram Link</FormLabel>
         <FormGroup>
-			<Field name="Instagram" type="text"
+			<Field name="instagram" type="text"
 				className="form-control" />
 			<ErrorMessage
 			name="instagram"
@@ -82,7 +84,7 @@ return (
 		</FormGroup>
 		<FormLabel>LinkedIn Link</FormLabel>
         <FormGroup>
-			<Field name="LinkedIn" type="text"
+			<Field name="linkedin" type="text"
 				className="form-control" />
 			<ErrorMessage
 			name="linkedin"

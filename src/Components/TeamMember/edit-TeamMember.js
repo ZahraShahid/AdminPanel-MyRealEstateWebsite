@@ -44,7 +44,7 @@ useEffect(() => {
 		setFormValues({image, name, role, facebook, twitter, instagram, linkedin});
 	})
 	.catch((err) => console.log(err));
-}, []);
+}, [props.match.params.id]);
 
 // Return Team Member form
 return (
