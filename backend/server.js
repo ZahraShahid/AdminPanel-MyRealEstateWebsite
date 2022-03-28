@@ -7,6 +7,9 @@ require('dotenv').config();
 
 // Express Route
 const teamMemberRoute = require('../backend/routes/TeamMember.route');
+const AboutUsRoute = require('../backend/routes/AboutUs.route');
+const GalleryRoute = require('../backend/routes/Gallery.route');
+
 
 // Connecting MongoDB Database
 const DB_uri = process.env.ATLAS_URI;
@@ -23,6 +26,8 @@ extended: true
 app.use(cors());
 app.use(express.json());
 app.use('/teamMembers', teamMemberRoute)
+app.use('/abouts', AboutUsRoute)
+app.use('/gallerys', GalleryRoute)
 
 
 // PORT
