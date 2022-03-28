@@ -7,18 +7,25 @@ import './App.css';
 import CreateTeamMember from "./Components/TeamMember/create-TeamMember";
 import EditTeammember from "./Components/TeamMember/edit-TeamMember";
 import TeamMemberList from "./Components/TeamMember/TeamMembers-list";
+import Sidebar from "./Components/TeamMember/Sidebar";
+import CreateGallery from "./Components/Gallery/create-Gallery";
+import EditGallery from "./Components/Gallery/edit-Gallery";
+import GallerysList from "./Components/Gallery/Gallery-list";
+import AboutList from "./Components/AboutUs/About-list";
+import EditAbout from "./Components/AboutUs/edit-About";
 
 function App() {
   return (
     <Router>
       <div className="App">
+      
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
               <Navbar.Brand>
-                <Link to={"/create-teamMember"} 
+                <Link to={"/"} 
                   className="nav-link">
-                  Team
+                  Dashboard
                 </Link>
               </Navbar.Brand>
   
@@ -40,6 +47,7 @@ function App() {
             </Container>
           </Navbar>
         </header>
+        
   
         <Container>
           <Row>
@@ -47,18 +55,37 @@ function App() {
               <div className="wrapper">
                 <Routes>
                   <Route exact path="/" 
-                    element={<CreateTeamMember/>} />
+                    element={<Sidebar/>} />
                   <Route path="/create-teamMember" 
                     element={<CreateTeamMember/>} />
                   <Route path="/edit-teamMember/:id"
                     element={<EditTeammember/>} />
                   <Route path="/teamMember-list" 
                     element={<TeamMemberList/>} />
+
+
+                     <Route path="/edit-gallery/:id"
+                    element={<EditGallery/>} />
+                  <Route path="/gallery-list" 
+                    element={<GallerysList/>} />
+                     <Route path="/create-gallery" 
+                    element={<CreateGallery/>} />
+
+                    <Route path="/edit-about/:id"
+                    element={<EditAbout/>} />
+                  <Route path="/about-list" 
+                    element={<AboutList/>} />
+                    
+
+
+                     
                 </Routes>
               </div>
             </Col>
           </Row>
         </Container>
+       
+       
       </div>
     </Router>
   );
