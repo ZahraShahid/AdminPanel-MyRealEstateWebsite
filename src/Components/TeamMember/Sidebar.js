@@ -25,13 +25,29 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="columns">Team</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/create-teamMember" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Contact</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="table">Create Team Member</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/About-list" activeClassName="activeClicked">
+            <NavLink exact to="/edit-teamMember" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="table">Edit Team Member</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/teamMember-list" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="table">Team Members List</CDBSidebarMenuItem>
+            </NavLink>
+
+
+            <NavLink exact to="/about-list" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="user">About</CDBSidebarMenuItem>
             </NavLink>
+            <NavLink exact to="/edit-about" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="user">Edit About</CDBSidebarMenuItem>
+            </NavLink>
+
+
             <NavLink exact to="/create-gallery" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">Gallery</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="chart-line">Add Image in Gallery</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/edit-gallery" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="chart-line">Edit Gallery</CDBSidebarMenuItem>
             </NavLink>
 
             <NavLink exact to="/hero404" target="_blank" activeClassName="activeClicked">
